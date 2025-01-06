@@ -2,20 +2,174 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+
+* {
+    scroll-behavior: smooth;
+}
+.page {
+    background-image: url(/headphone.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+.ZX9 {
+    background-image: url(/background-border.png);
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: cover;
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+.ZX7 {
+    background-image: url(/speaker-on-the-table.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position-x: right;
+}
+
+.mark-II {
+    background-image: url(/headphone-2.png);
+}
+.mark-I {
+    background-image: url(/disk.png);
+}
+.XX59 {
+    background-image: url(/hand-headphone.png);
+}
+.ZX9-product {
+    background-image: url(/two-speakers.png);
+}
+.ZX7-product {
+    background-image: url(/speaker-on-the-table.png);
+}
+.YX1 {
+    background-image: url(/earphone-2.png);
+}
+.product-image-2 {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 7px;
+}
+
+.white-headphone {
+    width: 10rem;
+}
+
+.cart-modal {
+    /* transform: translateX(100%); */
+    transition: transform 0.9s ease-in-out;
+}
+
+.cart-modal.open {
+    transform: translateX(0);
+}
+
+.bar1, .bar2, .bar3 {
+    width: 20px;
+    height: 2px;
+    background-color: #fff;
+    transition: 0.4s;
+}
+
+.change .bar1 {
+    transform: translate(0, 7px) rotate(-45deg);
+}
+
+.change .bar2 {
+    opacity: 0;
+}
+
+.change .bar3 {
+    transform: translate(0, -7px) rotate(45deg);
+}
+
+::-webkit-scrollbar {
+    width: 3px;
+}
+::-webkit-scrollbar-thumb {
+    background: #9a9a9a; 
+    border-radius: 10px;
+    box-shadow: inset 2px 2px 2px hsl(0deg 0% 100% / 25%), 
+                inset -2px -2px 2px rgb(0 0 0 / 25%);
+}
+
+@media screen and (min-width: 1024px) {
+    .product-details {
+        height: 30rem;
+        align-items: center;
+    }
+    .product-features {
+        width: 60%;
+    }
+    .product-content {
+        display: block;
+    }
+    .product-content h2 {
+        margin-bottom: 2rem;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .product-content {
+        flex-direction: row;
+        gap: 13rem;
+    }
+    .product-image-1 {
+        width: 38%;
+    }
+    .product-image-2 {
+        width: 60%;
+    }
+    .suggesstions {
+        align-items: center;
+        height: 25rem;
+    }
+    .suggesstion-products {
+        width: 100%;
+        height: 21rem;
+    }
+    .suggestion-1, .suggestion-2, .suggestion-3 {
+        width: 32%;
+    }
+    .suggestion-image {
+        height: 13rem;
+        width: 100%;
+    }
+    .suggestion-item {
+        height: 90%;
+    }
+}
+
+@media screen and (min-width: 570px) {
+    .AudioGear1 {
+        display: none;
+    }
+    .AudioGear2 {
+        display: block;
+        width: 100%;
+    }
+}
+@media screen and (min-width: 500px) {
+    .section {
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 0;
+    }
+    .section-item {
+        width: 32%;
+
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .page {
+        background-image: url(/headphone.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+    }
+    .ZX7 {
+        background-image: url(/Bitmap.png);
+    }
 }
