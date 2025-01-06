@@ -50,6 +50,7 @@
     background-size: cover;
     background-repeat: no-repeat;
     border-radius: 7px;
+    min-height: 20rem;
 }
 
 .white-headphone {
