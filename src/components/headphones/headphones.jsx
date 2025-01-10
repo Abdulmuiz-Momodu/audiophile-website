@@ -5,7 +5,7 @@ import Link from "next/link";
 export default function Headphone() {
   return (
     <div className="text-center lg:text-start">
-      <div className="bg-black text-white flex flex-col items-center justify-center text-4xl font-medium tracking-[2px] h-[12rem]">
+      <div className="bg-[#131313] text-white flex flex-col items-center justify-center text-4xl font-medium tracking-[2px] h-[12rem]">
         <h1>HEADPHONES</h1>
       </div>
 
@@ -38,7 +38,7 @@ export default function Headphone() {
                 sound.
               </p>
               <Link
-                href="/FirstHeadphone"
+                href="/xx99-mark-II-headphones"
                 className="h-12 w-40 flex flex-col items-center justify-center text-white bg-[#D87D4A] hover:bg-[#FBAF85] tracking-[1.5px]"
               >
                 SEE PRODUCT
@@ -66,7 +66,7 @@ export default function Headphone() {
                 the go.
               </p>
               <Link
-                href="/SecondHeadphone"
+                href="/xx99-mark-I-headphones"
                 className="h-12 w-40 flex flex-col items-center justify-center text-white bg-[#D87D4A] tracking-[1.5px]"
               >
                 SEE PRODUCT
@@ -98,7 +98,7 @@ export default function Headphone() {
                 home or on the move.
               </p>
               <Link
-                href="/ThirdHeadphone"
+                href="/xx59-headphones"
                 className="h-12 w-40 flex flex-col items-center justify-center text-white bg-[#D87D4A] tracking-[1.5px]"
               >
                 SEE PRODUCT

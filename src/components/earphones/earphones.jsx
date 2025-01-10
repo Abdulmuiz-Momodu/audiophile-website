@@ -5,7 +5,7 @@ import Section from "../section/section";
 export default function Earphones() {
   return (
     <div className="text-center lg:text-start">
-      <div className="bg-black text-white flex flex-col items-center justify-center text-4xl font-medium tracking-[2px] h-[12rem]">
+      <div className="bg-[#131313] text-white flex flex-col items-center justify-center text-4xl font-medium tracking-[2px] h-[12rem]">
         <h1>EARPHONE</h1>
       </div>
 
@@ -33,7 +33,7 @@ export default function Earphones() {
               cancellation feature.
             </p>
             <Link
-              href="/ProductEarphone"
+              href="/yx1-earphones"
               className="h-12 w-40 flex flex-col items-center justify-center text-white bg-[#D87D4A] hover:bg-[#FBAF85] tracking-[1.5px]"
             >
               SEE PRODUCT

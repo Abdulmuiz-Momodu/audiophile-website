@@ -6,7 +6,7 @@ export default function Footer() {
   return (
     <div className="flex flex-col gap-24">
       <AudioGear />
-      <div className="flex flex-col items-center md:items-start px-8 md:px-8 lg:px-28 pb-12 bg-black text-center md:text-start gap-12">
+      <div className="flex flex-col items-center md:items-start px-8 md:px-8 lg:px-28 pb-12 bg-[#131313] text-center md:text-start gap-12">
         <div className="flex flex-col items-center md:items-start gap-10">
           <div className="border-[3px] w-[101px] border-[#D87D4A]"></div>
           <img src="icon-logo.png" alt="icon-logo" />

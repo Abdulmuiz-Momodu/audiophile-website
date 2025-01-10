@@ -36,7 +36,7 @@ export default function FirstSpeaker() {
           className="text-gray-500  bg-transparent hover:text-[#D87D4A]"
           onClick={() => router.back()}
         >
-          Go Back
+          &larr; Go Back
         </button>
       </div>
 
@@ -86,7 +86,7 @@ export default function FirstSpeaker() {
               devices connected for easy switching. Improved bluetooth
               technology offers near lossless audio quality at up to 328ft
               (100m).
-              <br />
+              <br /> 
               <br />
               Discover clear, more natural sounding highs than the competition
               with ZX9’s signature planar diaphragm tweeter. Equally important
@@ -146,7 +146,7 @@ export default function FirstSpeaker() {
               </div>
               <h1 className="text-[2rem] font-medium">ZX7 SPEAKER</h1>
               <Link
-                href="/SecondSpeaker"
+                href="/zx7-speaker"
                 className="h-12 w-40 flex flex-col items-center justify-center font-medium text-white bg-[#D87D4A] hover:bg-[#FBAF85]"
               >
                 SEE PRODUCT
@@ -163,7 +163,7 @@ export default function FirstSpeaker() {
               </div>
               <h1 className="text-[2rem] font-medium">XX99 MARK I</h1>
               <Link
-                href="/SecondHeadphone"
+                href="/xx99-mark-I-headphones"
                 className="h-12 w-40 flex flex-col items-center justify-center font-medium text-white bg-[#D87D4A] hover:bg-[#FBAF85]"
               >
                 SEE PRODUCT
@@ -173,14 +173,14 @@ export default function FirstSpeaker() {
             <div className="suggestion-3 flex flex-col items-center gap-6 md:gap-0 md:justify-between md:h-[inherit]">
               <div className="suggestion-image flex justify-center py-4 rounded-lg bg-[#F1F1F1] w-[100%] md:h-80">
                 <img
-                  className="suggestion-item"
+                  className="suggestion-item white-headphone"
                   src="./white-headphone.png"
                   alt="white-headphone"
                 />
               </div>
               <h1 className="text-[2rem] font-medium">XX59</h1>
               <Link
-                href="/ThirdHeadphone"
+                href="/xx59-headphones"
                 className="h-12 w-40 flex flex-col items-center justify-center font-medium text-white bg-[#D87D4A] hover:bg-[#FBAF85]"
               >
                 SEE PRODUCT

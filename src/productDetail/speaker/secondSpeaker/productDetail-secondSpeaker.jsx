@@ -19,7 +19,7 @@ export default function SecondSpeaker() {
     image: "./speaker-1.png",
   };
 
-  // Handle quantity change
+  // Handle quantity change 
   const increaseQuantity = () => setQuantity((prev) => prev + 1);
   const decreaseQuantity = () =>
     setQuantity((prev) => (prev > 1 ? prev - 1 : 1));
@@ -36,7 +36,7 @@ export default function SecondSpeaker() {
           className="text-gray-500  bg-transparent hover:text-[#D87D4A]"
           onClick={() => router.back()}
         >
-          Go Back
+          &larr; Go Back
         </button>
       </div>
 
@@ -143,7 +143,7 @@ export default function SecondSpeaker() {
               </div>
               <h1 className="text-[2rem] font-medium">ZX9 SPEAKER</h1>
               <Link
-                href="/FirstSpeaker"
+                href="/zx9-speaker"
                 className="h-12 w-40 flex flex-col items-center justify-center font-medium text-white bg-[#D87D4A] hover:bg-[#FBAF85]"
               >
                 SEE PRODUCT
@@ -160,7 +160,7 @@ export default function SecondSpeaker() {
               </div>
               <h1 className="text-[2rem] font-medium">XX99 MARK I</h1>
               <Link
-                href="/SecondHeadphone"
+                href="/xx99-mark-I-headphones"
                 className="h-12 w-40 flex flex-col items-center justify-center font-medium text-white bg-[#D87D4A] hover:bg-[#FBAF85]"
               >
                 SEE PRODUCT
@@ -170,14 +170,14 @@ export default function SecondSpeaker() {
             <div className="suggestion-3 flex flex-col items-center gap-6 md:gap-0 md:justify-between md:h-[inherit]">
               <div className="suggestion-image flex justify-center py-4 rounded-lg bg-[#F1F1F1] w-[100%] md:h-80">
                 <img
-                  className="suggestion-item"
+                  className="suggestion-item white-headphone"
                   src="./white-headphone.png"
                   alt="white-headphone"
                 />
               </div>
               <h1 className="text-[2rem] font-medium">XX59</h1>
               <Link
-                href="/ThirdHeadphone"
+                href="/xx59-headphones"
                 className="h-12 w-40 flex flex-col items-center justify-center font-medium text-white bg-[#D87D4A] hover:bg-[#FBAF85]"
               >
                 SEE PRODUCT

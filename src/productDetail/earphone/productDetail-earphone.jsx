@@ -37,7 +37,7 @@ export default function ProductEarphone() {
           className="text-gray-500 bg-transparent  hover:text-[#D87D4A]"
           onClick={() => router.back()}
         >
-          Go Back
+          &larr; Go Back
         </button>
       </div>
 
@@ -147,7 +147,7 @@ export default function ProductEarphone() {
               </div>
               <h1 className="text-[2rem] font-medium">XX99 MARK I</h1>
               <Link
-                href="/SecondHeadphone"
+                href="/xx99-mark-I-headphones"
                 className="h-12 w-40 flex flex-col items-center justify-center text-white bg-[#D87D4A] hover:bg-[#FBAF85] tracking-[1.5px]"
               >
                 SEE PRODUCT
@@ -164,7 +164,7 @@ export default function ProductEarphone() {
               </div>
               <h1 className="text-[2rem] font-medium">XX59</h1>
               <Link
-                href="/ThirdHeadphone"
+                href="/xx59-headphones"
                 className="h-12 w-40 flex flex-col items-center justify-center text-white bg-[#D87D4A] hover:bg-[#FBAF85] tracking-[1.5px]"
               >
                 SEE PRODUCT
@@ -181,7 +181,7 @@ export default function ProductEarphone() {
               </div>
               <h1 className="text-[2rem] font-medium">ZX9 SPEAKER</h1>
               <Link
-                href="/FirstSpeaker"
+                href="/zx9-speaker"
                 className="h-12 w-40 flex flex-col items-center justify-center text-white bg-[#D87D4A] hover:bg-[#FBAF85] tracking-[1.5px]"
               >
                 SEE PRODUCT

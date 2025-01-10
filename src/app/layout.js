@@ -1,5 +1,4 @@
 "use client";
-import localFont from "next/font/local";
 import "./globals.css";
 import Header from "@/components/header/header";
 import Footer from "@/components/footer/footer";
@@ -7,18 +6,6 @@ import CartPage from "@/components/cartPage/cartPage";
 import { useState } from "react";
 import Section from "@/components/section/section";
 
-
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
-});
-
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
-});
 
 // export const metadata = {
 //   title: "Audiophile Website",
@@ -42,8 +29,9 @@ export default function RootLayout({ children }) {
 
   return (
     <html lang="en">
+
       <body
-        className={`h-fit ${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`h-fit antialiased`}
       >
         <div className="sticky top-0">
           <Header
@@ -56,7 +44,7 @@ export default function RootLayout({ children }) {
 
         {/* Modal for Cart */}
         {modal1 && (
-          <div className="fixed h-screen w-full bg-[#6b7280c4] flex justify-center p-8">
+          <div className="fixed h-screen w-full bg-[#6b7280c4] flex justify-center overflow-auto p-8">
             <div className="fixed md:top-[5.5rem] md:right-0 p-8 md:m-6 rounded-[7px] md:w-[25rem] w-[90%] h-fit bg-white shadow-lg z-50 cart-modal ${modal ? 'open' : ''}`}">
               <CartPage closeModal={() => setModal1(false)}/>
             </div>

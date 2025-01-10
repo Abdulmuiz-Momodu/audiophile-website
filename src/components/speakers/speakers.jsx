@@ -5,7 +5,7 @@ import Link from "next/link";
 export default function Speaker() {
   return (
     <div className="text-center lg:text-start">
-      <div className="bg-black text-white flex flex-col items-center justify-center text-4xl font-medium tracking-[2px] h-[12rem]">
+      <div className="bg-[#131313] text-white flex flex-col items-center justify-center text-4xl font-medium tracking-[2px] h-[12rem]">
         <h1>SPEAKERS</h1>
       </div>
 
@@ -38,7 +38,7 @@ export default function Speaker() {
                 practical audio setups.
               </p>
               <Link
-                href="/FirstSpeaker"
+                href="/zx9-speaker"
                 className="h-12 w-40 flex flex-col items-center justify-center text-white bg-[#D87D4A] hover:bg-[#FBAF85] tracking-[1.5px]"
               >
                 SEE PRODUCT
@@ -70,7 +70,7 @@ export default function Speaker() {
                 studio use.
               </p>
               <Link
-                href="/SecondSpeaker"
+                href="/zx7-speaker"
                 className="h-12 w-40 flex flex-col items-center justify-center text-white bg-[#D87D4A] tracking-[1.5px]"
               >
                 SEE PRODUCT

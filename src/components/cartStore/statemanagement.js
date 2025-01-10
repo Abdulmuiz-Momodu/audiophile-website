@@ -17,7 +17,7 @@ const useCartStore = create((set, get) => ({
       set({
         cartItems: [
           ...get().cartItems,
-          { ...item, quantity: item.quantity || 1 }
+          { ...item, quantity: item.quantity || 1 },
         ],
       });
     }
@@ -27,16 +27,14 @@ const useCartStore = create((set, get) => ({
   clearCart: () => {
     set({ cartItems: [] });
   },
-  
+
   // 3. Update Item Quantity
   updateItemQuantity: (itemId, quantity) => {
     if (quantity < 1) {
       get().removeItemFromCart(itemId);
     } else {
       const updatedCart = get().cartItems.map((cartItem) =>
-        cartItem.id === itemId
-          ? { ...cartItem, quantity }
-          : cartItem
+        cartItem.id === itemId ? { ...cartItem, quantity } : cartItem
       );
       set({ cartItems: updatedCart });
     }
@@ -44,9 +42,11 @@ const useCartStore = create((set, get) => ({
 
   // 4. Get Total Price
   getTotalPrice: () => {
-    return get().cartItems
-    .reduce((total, item) => total + item.price * item.quantity, 0)
-    .toLocaleString();
+    return get().cartItems.reduce(
+      (total, item) => total + item.price * item.quantity,
+      0
+    )
+    // .toLocaleString()
   },
 
   // 5. Get Total Cart Quantity
@@ -54,6 +54,11 @@ const useCartStore = create((set, get) => ({
     return get().cartItems.reduce((total, item) => total + item.quantity, 0);
   },
 
+  // 6. Get Quantity of Unique Product
+  getProductQuantity: (itemId) => {
+    const product = get().cartItems.find((cartItem) => cartItem.id === itemId);
+    return product ? product.quantity : 0;
+  },
 }));
 
 export default useCartStore;

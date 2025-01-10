@@ -1,5 +1,6 @@
 "use client";
 import React from "react";
+import Link from "next/link";
 import useCartStore from "../cartStore/statemanagement";
 
 export default function Cart({ closeModal }) {
@@ -17,7 +18,7 @@ export default function Cart({ closeModal }) {
         <div className="flex flex-col items-center gap-8">
           <p className="text-lg font-medium">CART IS EMPTY.</p>
           <button
-            className="w-full bg-[#D87D4A] p-3 text-white font-medium"
+            className="w-full bg-[#D87D4A] hover:bg-[#FBAF85] p-3 text-white font-medium rounded text-center"
             onClick={closeModal}
           >
             CONTINUE SHOPPING
@@ -25,12 +26,12 @@ export default function Cart({ closeModal }) {
         </div>
       ) : (
         <div className="flex flex-col gap-8">
-          <button
-            className="absolute top-3 right-3 text-xl font-medium"
+          <span
+            className="absolute top-3 right-3 text-2xl font-medium cursor-pointer hover:text-[#D87D4A] hover:scale-[1.2]"
             onClick={closeModal}
           >
-            x
-          </button>
+            &times;
+          </span>
           <div className="flex justify-between items-center pt-4">
             <h1 className="text-2xl font-bold">
               Cart({getTotalCartQuantity()})
@@ -86,9 +87,9 @@ export default function Cart({ closeModal }) {
               <h3 className="text-gray-500">TOTAL: </h3>
               <h3 className="font-medium">${getTotalPrice()}</h3>
             </div>
-            <button className="w-full bg-[#D87D4A] p-3 text-white font-medium">
+            <Link href="/checkout" onClick={closeModal} className="w-full bg-[#D87D4A] hover:bg-[#FBAF85] p-3 text-white font-medium rounded text-center">
               CHECKOUT
-            </button>
+            </Link>
           </div>
         </div>
       )}
