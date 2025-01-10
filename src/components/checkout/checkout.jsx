@@ -164,6 +164,9 @@ export default function Checkout() {
                       <input
                         type="text"
                         placeholder="238521993"
+                        inputMode="numeric"
+                        maxLength="9"
+                        pattern="\d{9}"
                         className="w-full p-5 border rounded-md focus:outline-none focus:ring-2 focus:ring-[#D87D4A]"
                       />
                     </div>
