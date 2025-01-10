@@ -1,42 +1,42 @@
 "use client";
 import Hero from "@/components/pageHero/hero";
 import Link from "next/link";
-// import { auth, googleProvider } from "@/services/firebase.js";
-// import { signInWithPopup, signOut } from "firebase/auth";
+import { auth, googleProvider } from "@/services/firebase.js";
+import { signInWithPopup, signOut } from "firebase/auth";
 
 export default function Home() {
-  //   // const [authorize, setAuthorize] = useState();
-  //   const handleLogout = async () => {
-  //     await signOut(auth)
-  //        .then(() => {
-  //          console.log("signed out!!!");
-  //        })
-  //        .catch((error) => {
-  //          console.error("error signing out", error);
-  //        });
-  //  };
+    // const [authorize, setAuthorize] = useState();
+    const handleLogout = async () => {
+      await signOut(auth)
+         .then(() => {
+           console.log("signed out!!!");
+         })
+         .catch((error) => {
+           console.error("error signing out", error);
+         });
+   };
 
-  //   const handleGoogleSigup = async () => {
-  //     // setAuthorizing(true);
-  //     let result = null;
-  //     try {
-  //       // if(typeof window !== 'undefined') {
-  //          result = await signInWithPopup(auth, googleProvider);
-  //       // }
-  //       console.log("result", result);
+    const handleGoogleSigup = async () => {
+      // setAuthorizing(true);
+      let result = null;
+      try {
+        // if(typeof window !== 'undefined') {
+           result = await signInWithPopup(auth, googleProvider);
+        // }
+        console.log("result", result);
 
-  //       const { user, credentials } = result;
+        const { user, credentials } = result;
 
-  //       console.log({ user, credentials});
-  //       // setUser(credentials.displayName);
-  //       // console.log(users)
-  //       console.log("Successfully loggedin!");
-  //       Router.push('/');
-  //     } catch (error) {
-  //       console.log("error signing in", error);
-  //     }
-  //     // setAuthorizing(false);
-  //   };
+        console.log({ user, credentials});
+        // setUser(credentials.displayName);
+        // console.log(users)
+        console.log("Successfully loggedin!");
+        Router.push('/');
+      } catch (error) {
+        console.log("error signing in", error);
+      }
+      // setAuthorizing(false);
+    };
 
   return (
     <div className="bg-white flex flex-col text-center lg:text-start text-black w-full">
@@ -58,8 +58,8 @@ export default function Home() {
           >
             SEE PRODUCT
           </Link>
-          {/* <button className="bg-slate-700 text-white" onClick={handleGoogleSigup} >Google Signup</button>
-          <button className="bg-slate-700 text-white" onClick={handleLogout} >Log Out</button> */}
+          <button className="bg-slate-700 text-white" onClick={handleGoogleSigup} >Google Signup</button>
+          <button className="bg-slate-700 text-white" onClick={handleLogout} >Log Out</button>
         </div>
       </div>
 
