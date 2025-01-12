@@ -1,14 +1,14 @@
 import React from "react";
 import Link from "next/link";
 import Section from "../section/section";
+import AudioGear from "../audioGear/audioGear";
 
 export default function Earphones() {
   return (
     <div className="text-center lg:text-start">
       <div className="bg-[#131313] text-white flex flex-col items-center justify-center text-4xl font-medium tracking-[2px] h-[12rem]">
-        <h1>EARPHONE</h1>
+        <h1>EARPHONES</h1>
       </div>
-
       <div className="px-4 pt-20 md:px-8 lg:pt-28 lg:px-28">
         <div className="flex flex-col lg:flex-row items-center gap-6 lg:gap-[8%] lg:h-[27rem]">
           <div className="bg-[#f1f1f1] w-full flex flex-col items-center justify-center h-[20rem] rounded-[6px] lg:w-[46%] lg:h-[inherit]">
@@ -41,6 +41,7 @@ export default function Earphones() {
           </div>
         </div>
         <Section />
+        <AudioGear />
       </div>
     </div>
   );

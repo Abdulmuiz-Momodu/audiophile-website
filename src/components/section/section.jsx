@@ -13,8 +13,8 @@ export default function Section({ className, closeModal }) {
   };
 
   return (
-    <div className={`section flex flex-col gap-16 pt-28 ${className}`}>
-      <div className="section-item flex flex-col items-center pb-4 bg-[#F1F1F1] border-none rounded">
+    <div className={`section flex flex-col gap-16 pt-28 w-full ${className}`}>
+      <div className="section-item flex flex-col items-center pb-4 w-full bg-[#F1F1F1] border-none rounded">
         <div className="flex flex-col items-center -mt-12">
           <img className="h-28" src="./headphone-nobg.png" alt="headphone-1" />
           <img className="-mt-14" src="./icon-shadow.png" alt="icon-shadow" />
@@ -33,7 +33,7 @@ export default function Section({ className, closeModal }) {
           </Link>
         </div>
       </div>
-      <div className="section-item flex flex-col items-center pb-4 bg-[#F1F1F1] border-none rounded">
+      <div className="section-item flex flex-col items-center pb-4 w-full bg-[#F1F1F1] border-none rounded">
         <div className="flex flex-col items-center -mt-12">
           <img className="h-28" src="./speaker-nobg.png" alt="speaker-nobg" />
           <img className="-mt-14" src="./icon-shadow.png" alt="icon-shadow" />
@@ -52,7 +52,7 @@ export default function Section({ className, closeModal }) {
           </Link>
         </div>
       </div>
-      <div className="section-item flex flex-col items-center pb-4 bg-[#F1F1F1] border-none rounded">
+      <div className="section-item flex flex-col items-center pb-4 w-full bg-[#F1F1F1] border-none rounded">
         <div className="flex flex-col items-center -mt-12">
           <img className="h-28" src="./earphone-nobg.png" alt="earphone-nobg" />
           <img className="-mt-14" src="./icon-shadow.png" alt="icon-shadow" />

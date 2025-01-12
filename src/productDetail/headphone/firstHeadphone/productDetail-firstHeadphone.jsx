@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import useCartStore from "@/components/cartStore/statemanagement"; // Zustand store import
 import Section from "@/components/section/section";
+import AudioGear from "@/components/audioGear/audioGear";
 
 export default function FirstHeadphone() {
   const router = useRouter();
@@ -31,16 +32,15 @@ export default function FirstHeadphone() {
   };
 
   return (
-    <div className="flex flex-col items-start gap-8 p-4 lg:px-28 lg:pt-16">
+    <div className="flex flex-col items-start p-4 lg:px-28 lg:pt-16">
       <div>
         <button
-          className="text-gray-500  bg-transparent hover:text-[#D87D4A]"
+          className="text-gray-500 bg-transparent mb-8 hover:text-[#D87D4A]"
           onClick={() => router.back()}
         >
           &larr; Go Back
         </button>
       </div>
-
       <div className="flex flex-col gap-16">
         <div className="product-details flex flex-col w-full md:flex-row md:h-[25rem] gap-6 lg:gap-[8%]">
           <div className="bg-[#f1f1f1] w-[100%] lg:w-[46%] md:h-[inherit] flex flex-col items-center justify-center h-[20rem] rounded-[6px]">
@@ -75,7 +75,6 @@ export default function FirstHeadphone() {
             </div>
           </div>
         </div>
-
         <div className="flex flex-col gap-16 lg:flex-row lg:gap-32">
           <div className="product-features flex flex-col gap-8">
             <h2 className="text-2xl font-medium">FEATURES</h2>
@@ -97,7 +96,6 @@ export default function FirstHeadphone() {
               a modern design aesthetic.
             </p>
           </div>
-
           <div className="product-content flex flex-col gap-8">
             <h2 className="text-2xl font-medium">IN THE BOX</h2>
             <div className="flex flex-col gap-4">
@@ -124,7 +122,6 @@ export default function FirstHeadphone() {
             </div>
           </div>
         </div>
-
         <div className="flex flex-col md:flex-row gap-4">
           <div className="product-image-1 flex flex-col gap-4">
             <img src="./image-1-desktop.png" alt="image-1-desktop" />
@@ -132,7 +129,6 @@ export default function FirstHeadphone() {
           </div>
           <div className="product-image-2 mark-II"></div>
         </div>
-
         <div className="suggesstions flex flex-col gap-8 md:gap-0 md:justify-between">
           <h2 className="text-2xl font-medium">YOU MAY ALSO LIKE</h2>
           <div className="suggesstion-products flex flex-col gap-8 md:flex-row md:gap-0 md:justify-between">
@@ -152,11 +148,10 @@ export default function FirstHeadphone() {
                 SEE PRODUCT
               </Link>
             </div>
-
             <div className="suggestion-2 flex flex-col items-center gap-6 md:gap-0 md:justify-between md:h-[inherit]">
               <div className="suggestion-image flex justify-center py-4 h-40 rounded-lg bg-[#F1F1F1] w-[100%] md:h-80">
                 <img
-                  className="suggestion-item white-headphone"
+                  className="suggestion-item product-resize"
                   src="./white-headphone.png"
                   alt="white-headphone"
                 />
@@ -169,7 +164,6 @@ export default function FirstHeadphone() {
                 SEE PRODUCT
               </Link>
             </div>
-
             <div className="suggestion-3 flex flex-col items-center gap-6 md:gap-0 md:justify-between md:h-[inherit]">
               <div className="suggestion-image flex justify-center py-4 rounded-lg bg-[#F1F1F1] w-[100%] md:h-80">
                 <img
@@ -189,8 +183,8 @@ export default function FirstHeadphone() {
           </div>
         </div>
       </div>
-
       <Section />
+      <AudioGear />
     </div>
   );
 }

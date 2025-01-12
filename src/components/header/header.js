@@ -70,6 +70,3 @@ export default function Header({
     </div>
   );
 }
-{
-  /* <hr className="bg-"/> */
-}

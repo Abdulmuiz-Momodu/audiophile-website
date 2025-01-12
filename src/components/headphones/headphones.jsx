@@ -1,6 +1,7 @@
 import React from "react";
 import Section from "../section/section";
 import Link from "next/link";
+import AudioGear from "../audioGear/audioGear";
 
 export default function Headphone() {
   return (
@@ -8,7 +9,6 @@ export default function Headphone() {
       <div className="bg-[#131313] text-white flex flex-col items-center justify-center text-4xl font-medium tracking-[2px] h-[12rem]">
         <h1>HEADPHONES</h1>
       </div>
-
       <div className="px-4 pt-20 md:px-8 lg:pt-28 lg:px-28">
         <div className="flex flex-col gap-24">
           <div className="flex flex-col lg:flex-row items-center gap-6 lg:gap-[8%] lg:h-[27rem]">
@@ -106,8 +106,8 @@ export default function Headphone() {
             </div>
           </div>
         </div>
-
         <Section />
+        <AudioGear />
       </div>
     </div>
   );

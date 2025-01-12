@@ -39,7 +39,6 @@ export default function Checkout() {
           </div>
         </div>
       )}
-
       <div className="flex flex-col bg-[#f1f1f1] items-start gap-8 p-4 lg:px-28 lg:pt-16">
         <div className="mb-8">
           <button
@@ -49,19 +48,16 @@ export default function Checkout() {
             &larr; Go Back
           </button>
         </div>
-
         <div className="flex flex-col lg:flex-row items-start gap-8 w-full">
           {/* CHECKOUT */}
           <div className="flex flex-col lg:w-[60%] p-8 gap-12 w-full bg-white rounded-lg shadow-md">
             <h1 className="text-4xl font-medium">CHECKOUT</h1>
-
             <div className="flex flex-col gap-12">
               {/* Billing Details */}
               <div className="flex flex-col gap-4">
                 <h3 className="text-base font-semibold text-[#D87D4A] tracking-wider">
                   BILLING DETAILS
                 </h3>
-
                 <div className="grid-area">
                   <div className="flex flex-col gap-2">
                     <p className="text-sm font-medium">Name</p>
@@ -90,13 +86,11 @@ export default function Checkout() {
                   </div>
                 </div>
               </div>
-
               {/* Shipping Info */}
               <div className="flex flex-col gap-4">
                 <h3 className="text-base font-semibold text-[#D87D4A] tracking-wider">
                   SHIPPING INFO
                 </h3>
-
                 <div className="flex flex-col gap-5">
                   <div className="flex flex-col gap-2">
                     <p className="text-sm font-medium">Your Address</p>
@@ -106,7 +100,6 @@ export default function Checkout() {
                       className="w-full p-5 border rounded-md focus:outline-none focus:ring-2 focus:ring-[#D87D4A]"
                     />
                   </div>
-
                   <div className="grid-area">
                     <div className="flex flex-col gap-2">
                       <p className="text-sm font-medium">ZIP Code</p>
@@ -116,7 +109,6 @@ export default function Checkout() {
                         className="w-full p-5 border rounded-md focus:outline-none focus:ring-2 focus:ring-[#D87D4A]"
                       />
                     </div>
-
                     <div className="flex flex-col gap-2">
                       <p className="text-sm font-medium">City</p>
                       <input
@@ -125,7 +117,6 @@ export default function Checkout() {
                         className="w-full p-5 border rounded-md focus:outline-none focus:ring-2 focus:ring-[#D87D4A]"
                       />
                     </div>
-
                     <div className="flex flex-col gap-2">
                       <p className="text-sm font-medium">Country</p>
                       <input
@@ -137,7 +128,6 @@ export default function Checkout() {
                   </div>
                 </div>
               </div>
-
               {/* Payment Details */}
               <div className="flex flex-col gap-4">
                 <h3 className="text-base font-semibold text-[#D87D4A] tracking-wider">
@@ -157,7 +147,6 @@ export default function Checkout() {
                       </label>
                     </div>
                   </div>
-
                   <div className="grid-area">
                     <div className="flex flex-col gap-2">
                       <p className="text-sm font-medium">e-Money Number</p>
@@ -170,7 +159,6 @@ export default function Checkout() {
                         className="w-full p-5 border rounded-md focus:outline-none focus:ring-2 focus:ring-[#D87D4A]"
                       />
                     </div>
-
                     <div className="flex flex-col gap-2">
                       <p className="text-sm font-medium">e-Money PIN</p>
                       <input
@@ -187,11 +175,9 @@ export default function Checkout() {
               </div>
             </div>
           </div>
-
           {/* Order Summary */}
           <div className="flex flex-col w-full lg:w-[36%] p-8 gap-8 bg-white rounded-lg shadow-md">
             <h2 className="text-2xl font-medium">SUMMARY</h2>
-
             <div className="flex flex-col gap-6">
               {cartItems.map((item) => (
                 <div
@@ -223,28 +209,23 @@ export default function Checkout() {
                   </div>
                 </div>
               ))}
-
               <div className="flex justify-between items-center">
                 <p>TOTAL</p>
                 <p className="font-semibold">$ {getTotalPrice()}</p>
               </div>
-
               <div className="flex justify-between items-center">
                 <p>SHIPPING</p>
                 <p className="font-semibold">$ 50</p>
               </div>
-
               <div className="flex justify-between items-center">
                 <p>VAT (INCLUDED)</p>
                 <p className="font-semibold">$ 1,079</p>
               </div>
             </div>
-
             <div className="flex justify-between items-center mt-6">
               <p className="font-bold text-lg">GRAND TOTAL</p>
               <p className="text-[#D87D4A] text-lg font-semibold">$ {formattedGrandTotal}</p>
             </div>
-
             <button
               onClick={handlePayment}
               disabled={loading}
