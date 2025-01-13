@@ -4,7 +4,7 @@ import Header from "@/components/header/header";
 import Footer from "@/components/footer/footer";
 import CartPage from "@/components/cartPage/cartPage";
 import { useState } from "react";
-import Section from "@/components/section/section";
+import ModalMenu from "@/components/modalMenu/modalMenu";
 
 // export const metadata = {
 //   title: "Audiophile Website",
@@ -50,9 +50,8 @@ export default function RootLayout({ children }) {
         {modal2 && (
           <div className="fixed h-screen w-full bg-[#6b7280c4] flex justify-center">
             <div className="fixed overflow-visible rounded[7px] px-4 pb-4 w-full h-fit bg-white shadow-lg z-50 menu-modal">
-              <Section
+              <ModalMenu
                 closeModal={() => setModal2(false)}
-                className={`${modal ? "h-[20rem] overflow-auto" : ""}`}
               />
             </div>
           </div>
