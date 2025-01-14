@@ -12,7 +12,7 @@ export default function Checkout() {
   const { cartItems, getTotalPrice, getProductQuantity } = useCartStore();
 
   const grandTotal = Number(getTotalPrice()) + 50 + 1079;
-  
+
   const formattedGrandTotal = grandTotal.toLocaleString();
 
   const handleOpenModal = () => {
@@ -20,14 +20,14 @@ export default function Checkout() {
   };
 
   const handlePayment = () => {
-    setModal(true);
+    // setModal(true);
     setLoading(true);
     setTimeout(() => {
       // alert("Payment successful!");
       // router.push("/thank-you"); // Redirect to thank you page after payment
-      handleOpenModal();
       setLoading(false);
-    }, 100000); // Simulating payment process
+      handleOpenModal();
+    }, 1000); // Simulating payment process
   };
 
   return (
@@ -39,7 +39,7 @@ export default function Checkout() {
           </div>
         </div>
       )}
-      <div className="flex flex-col bg-[#f1f1f1] items-start gap-8 p-4 lg:px-28 lg:pt-16">
+      <div className="flex flex-col bg-[#f1f1f1] items-start gap-8 p-4 pb-24 lg:px-28 lg:pt-16">
         <div className="mb-8">
           <button
             className="text-gray-500 transition-all hover:text-[#D87D4A]"
@@ -106,6 +106,9 @@ export default function Checkout() {
                       <input
                         type="text"
                         placeholder="10001"
+                        inputMode="numeric"
+                        maxLength="5"
+                        pattern="\d{5}"
                         className="w-full p-5 border rounded-md focus:outline-none focus:ring-2 focus:ring-[#D87D4A]"
                       />
                     </div>
@@ -176,65 +179,66 @@ export default function Checkout() {
             </div>
           </div>
           {/* Order Summary */}
-          <div className="flex flex-col w-full lg:w-[36%] p-8 gap-8 bg-white rounded-lg shadow-md">
-            <h2 className="text-2xl font-medium">SUMMARY</h2>
-            <div className="flex flex-col gap-6">
-              {cartItems.map((item) => (
-                <div
-                  key={item.id}
-                  className="w-full border-b"
-                >
-                  <div className="flex justify-between w-[inherit] pb-2">
-                    <div className="flex gap-3">
-                      <div className="bg-[#f1f1f1] p-1 w-[3.5rem] h-[3.5rem] flex flex-col items-center justify-center rounded-[6px]">
-                        <img
-                          className="h-[75%]"
-                          src={item.image}
-                          alt={item.id}
-                        />
-                        <img
-                          className="-mt-4"
-                          src="./icon-shadow.png"
-                          alt="icon-shadow"
-                        />
+          <div className=" w-full lg:w-[36%]">
+            <div className="flex flex-col w-full p-8 gap-8 bg-white rounded-lg shadow-md">
+              <h2 className="text-2xl font-medium">SUMMARY</h2>
+              <div className="flex flex-col gap-6">
+                {cartItems.map((item) => (
+                  <div key={item.id} className="w-full border-b">
+                    <div className="flex justify-between w-[inherit] pb-2">
+                      <div className="flex gap-3">
+                        <div className="bg-[#f1f1f1] p-1 w-[3.5rem] h-[3.5rem] flex flex-col items-center justify-center rounded-[6px]">
+                          <img
+                            className="h-[75%]"
+                            src={item.image}
+                            alt={item.id}
+                          />
+                          <img
+                            className="-mt-4"
+                            src="./icon-shadow.png"
+                            alt="icon-shadow"
+                          />
+                        </div>
+                        <div>
+                          <h2 className="font-medium">{item.name}</h2>
+                          <p className="text-gray-500 font-medium">
+                            $ {Number(item.price).toLocaleString()}
+                          </p>
+                        </div>
                       </div>
-                      <div>
-                        <h2 className="font-medium">{item.name}</h2>
-                        <p className="text-gray-500 font-medium">
-                          $ {Number(item.price).toLocaleString()}
-                        </p>
-                      </div>
+                      <p>x {getProductQuantity()}</p>
                     </div>
-                    <p>x {getProductQuantity()}</p>
                   </div>
+                ))}
+                <div className="flex justify-between items-center">
+                  <p>TOTAL</p>
+                  <p className="font-semibold">$ {getTotalPrice()}</p>
                 </div>
-              ))}
-              <div className="flex justify-between items-center">
-                <p>TOTAL</p>
-                <p className="font-semibold">$ {getTotalPrice()}</p>
+                <div className="flex justify-between items-center">
+                  <p>SHIPPING</p>
+                  <p className="font-semibold">$ 50</p>
+                </div>
+                <div className="flex justify-between items-center">
+                  <p>VAT (INCLUDED)</p>
+                  <p className="font-semibold">$ 1,079</p>
+                </div>
               </div>
-              <div className="flex justify-between items-center">
-                <p>SHIPPING</p>
-                <p className="font-semibold">$ 50</p>
+              <div className="flex justify-between items-center mt-6">
+                <p className="font-bold text-lg">GRAND TOTAL</p>
+                <p className="text-[#D87D4A] text-lg font-semibold">
+                  $ {formattedGrandTotal}
+                </p>
               </div>
-              <div className="flex justify-between items-center">
-                <p>VAT (INCLUDED)</p>
-                <p className="font-semibold">$ 1,079</p>
-              </div>
+              <button
+                onClick={handlePayment}
+                disabled={loading}
+                className={`w-full mt-8 py-4 rounded-md transition-all duration-300 ${
+                  loading ? "bg-gray-400" : "bg-[#D87D4A] hover:bg-[#FBAF85]"
+                } text-white active:scale-95`}
+              >
+                {loading ? "PROCESSING..." : "CONTINUE & PAY"}
+              </button>
             </div>
-            <div className="flex justify-between items-center mt-6">
-              <p className="font-bold text-lg">GRAND TOTAL</p>
-              <p className="text-[#D87D4A] text-lg font-semibold">$ {formattedGrandTotal}</p>
-            </div>
-            <button
-              onClick={handlePayment}
-              disabled={loading}
-              className={`w-full mt-8 py-4 rounded-md transition-all duration-300 ${
-                loading ? "bg-gray-400" : "bg-[#D87D4A] hover:bg-[#FBAF85]"
-              } text-white active:scale-95`}
-            >
-              {loading ? "PROCESSING..." : "CONTINUE & PAY"}
-            </button>
           </div>
         </div>
       </div>

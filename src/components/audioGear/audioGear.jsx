@@ -2,7 +2,7 @@ import React from "react";
 
 export default function AudioGear() {
   return (
-    <div className="pt-28 flex flex-col lg:flex-row-reverse lg:justify-between lg:gap-0 items-center text-center lg:text-start gap-8">
+    <div className="pt-28 pb-24 flex flex-col lg:flex-row-reverse lg:justify-between lg:gap-0 items-center text-center lg:text-start gap-8">
       <img
         className="AudioGear1 block lg:block lg:w-[45%]"
         src="./image-1-mobile.png"

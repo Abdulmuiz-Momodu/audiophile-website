@@ -1,11 +1,9 @@
 import React from "react";
 import Link from "next/link";
-// import AudioGear from "../audioGear/audioGear";
 
 export default function Footer() {
   return (
-    <div className="pt-24">
-      {/* <AudioGear /> */}
+    <div>
       <div className="flex flex-col items-center md:items-start px-8 md:px-8 lg:px-28 pb-12 bg-[#131313] text-center md:text-start gap-12">
         <div className="flex flex-col items-center md:items-start gap-10">
           <div className="border-[3px] w-[101px] border-[#D87D4A]"></div>
